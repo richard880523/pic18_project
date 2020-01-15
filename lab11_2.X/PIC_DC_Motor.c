@@ -150,9 +150,7 @@ void main(void)
         //Duty_Scale = (((float)(ADC_Read1(0)/4.0))/2.55); /* Scale Duty Cycle */
         Duty_Scale = (((float)(abs(ws_double*1023)/4.0))/2.55);
         SetDutyCycleTo(Duty_Scale, Period);
-        //Duty_Scale = (((float)(ADC_Read2(0)/4.0))/2.55); /* Scale Duty Cycle */
-        Duty_Scale = (((float)(abs(ws_double*1023)/4.0))/2.55);
-        SetDutyCycleTo2(Duty_Scale, Period);
+
     }
 }
 void __interrupt(high_priority) Hi_ISR(void)
